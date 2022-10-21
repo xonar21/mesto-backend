@@ -32,6 +32,7 @@ app.use(cors({
     'https://mestoproject.nomoredomains.xyz',
     'http://mestoproject.nomoredomains.xyz',
     'http://localhost:3000',
+    'https://mesto15.herokuapp.com',
   ],
   methods: ['OPTIONS', 'GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
   allowedHeaders: ['Content-Type', 'origin', 'Authorization'],
@@ -52,7 +53,7 @@ app.post('/signup', registerValid, createUser);
 
 app.post('/signin', loginValid, login);
 
-mongoose.connect('mongodb://localhost:27017/mestodb', { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/mestodb', { useNewUrlParser: true });
 
 app.use(auth);
 app.use(errorLogger);
