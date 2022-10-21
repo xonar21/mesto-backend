@@ -31,8 +31,8 @@ module.exports.login = (req, res, next) => {
       res.status(200).send({ message: 'Авторизация успешна', token });
     })
     .catch((err) => {
-      console.log(err)
-      next(new Unauthorized('Не правильный логин или пароль'));
+      next(console.log(err))
+      // next(new Unauthorized('Не правильный логин или пароль'));
     });
 };
 module.exports.getUser = (req, res, next) => {
