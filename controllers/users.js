@@ -30,7 +30,8 @@ module.exports.login = (req, res, next) => {
       });
       res.status(200).send({ message: 'Авторизация успешна', token });
     })
-    .catch(() => {
+    .catch((err) => {
+      console.log(err)
       next(new Unauthorized('Не правильный логин или пароль'));
     });
 };
