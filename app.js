@@ -53,7 +53,7 @@ app.post('/signup', registerValid, createUser);
 
 app.post('/signin', loginValid, login);
 
-mongoose.connect('mongodb://localhost:27017/mestodb', { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
 
 app.use(auth);
 app.use(errorLogger);
