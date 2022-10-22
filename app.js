@@ -53,7 +53,7 @@ app.post('/signup', registerValid, createUser);
 
 app.post('/signin', loginValid, login);
 
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
+mongoose.connect('mongodb+srv://xonar:sijc1980@cluster0.5m15brm.mongodb.net/?retryWrites=true&w=majority', { useNewUrlParser: true });
 
 app.use(auth);
 app.use(errorLogger);
