@@ -49,7 +49,7 @@ const userSchema = new mongoose.Schema({
 userSchema.statics.findUserByCredentials = function loginUser(res, email, password) {
   return this.findOne({ email }).select('+password')
     .then((user) => {
-      console.log(user)
+      // console.log(user)
       if (!user) {
         throw new Unauthorized('Указан некорректный Email или пароль.');
       }
@@ -57,7 +57,7 @@ userSchema.statics.findUserByCredentials = function loginUser(res, email, passwo
       return bcrypt.compare(password, user.password)
       
         .then((matched) => {
-          console.log(password)
+          // console.log(password)
           if (!matched) {
             throw new Unauthorized('Указан некорректный Email или пароль.');
           }
