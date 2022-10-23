@@ -1,29 +1,31 @@
-[![Tests](https://github.com/yandex-praktikum/express-mesto-gha/actions/workflows/tests-13-sprint.yml/badge.svg)](https://github.com/yandex-praktikum/express-mesto-gha/actions/workflows/tests-13-sprint.yml) [![Tests](https://github.com/yandex-praktikum/express-mesto-gha/actions/workflows/tests-14-sprint.yml/badge.svg)](https://github.com/yandex-praktikum/express-mesto-gha/actions/workflows/tests-14-sprint.yml)
-# Проект Mesto фронтенд + бэкенд
+# ** Проект Mesto - API**
 
-Ссылка на репазиторий: https://github.com/xonar21/express-mesto-gha.git
+### О чём этот проект:
 
-## Настройка бейджей статуса тестов
-Перед началом работы над проектом рекомендуется исправить бейджи, отражающие статус прохождения тестов.
-Для этого замените разметку бейджей на следующий фрагмент, подставив вместо `${имя_пользователя}` и `${имя_репозитория}` соответствующие значения.
-
-
-[![Tests for sprint 13](https://github.com/xonar21/express-mesto-gha/actions/workflows/tests-13-sprint.yml/badge.svg)](https://github.com/xonar21/express-mesto-gha/actions/workflows/tests-13-sprint.yml) 
-
-[![Tests for sprint 14](https://github.com/xonar21/express-mesto-gha/actions/workflows/tests-14-sprint.yml/badge.svg)](https://github.com/xonar21/express-mesto-gha/actions/workflows/tests-14-sprint.yml)
-
-
-
-
-## Директории
-
-`/routes` — папка с файлами роутера  
-`/controllers` — папка с файлами контроллеров пользователя и карточки   
-`/models` — папка с файлами описания схем пользователя и карточки  
-  
-Остальные директории вспомогательные, создаются при необходимости разработчиком
-
+Самостоятельный учебный проект для Яндекс.Практикума сайт с карточками – Mesto. Финальный этап реализации бэкенда: создание виртуальной машины и деплой проекта на публичный сервер. В данной работе отрабатываются навыки по взаимодействию с Node.js, Express.js, MongoDB, развертывание сервера на удалённой виртуальной машине. Также добавлен центральный обработчик ошибок и реализована валидация введёных данных с помощью celebrate и Joi.
+___
 ## Запуск проекта
 
 `npm run start` — запускает сервер   
 `npm run dev` — запускает сервер с hot-reload
+___
+## Функциональность:
+* Регистрация;
+* Авторизация;
+* Обновление данных пользователя;
+* Получение информации о текущем пользователе;
+* Получение списка карточек;
+* Создание карточки;
+* Удаление карточки;
+* Поставить лайк;
+* Удалить лайк;
+* Обработка ошибок;
+* Валидация входящих данных.
+___
+## Используемые технологии:
+
+* NodeJS
+* Express
+* MongoDB
+* Mongoose
+
