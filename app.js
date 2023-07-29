@@ -32,7 +32,7 @@ app.use(cors({
     'https://mestoproject.nomoredomains.xyz',
     'http://mestoproject.nomoredomains.xyz',
     'http://localhost:3000',
-    'https://mestofrontend-156439099362.herokuapp.com/',
+    'https://mestofrontend-156439099362.herokuapp.com',
   ],
   methods: ['OPTIONS', 'GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
   allowedHeaders: ['Content-Type', 'origin', 'Authorization'],
