@@ -53,7 +53,15 @@ app.post('/signup', registerValid, createUser);
 
 app.post('/signin', loginValid, login);
 
-mongoose.connect('mongodb+srv://xonar:sijc1980@cluster0.5m15brm.mongodb.net/?retryWrites=true&w=majority', { useNewUrlParser: true });
+mongoose.connect('mongodb+srv://xonar:sijc1980@cluster0.kpvnwew.mongodb.net/?retryWrites=true&w=majority', { useNewUrlParser: true });
+
+// mongoose.connect('mongodb://localhost:27017/mydb', { useNewUrlParser: true });
+
+// mongoose.connect('mongodb://localhost:27017/mydb', {
+//   useNewUrlParser: true,
+//   useCreateIndex: true,
+//     useFindAndModify: false
+// });
 
 app.use(auth);
 app.use(errorLogger);
