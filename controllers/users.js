@@ -19,7 +19,7 @@ module.exports.login = (req, res, next) => {
   
   return User.findUserByCredentials(res,email,password)
     .then((user) => {
-      // console.log(user)
+      console.log(user, res,email,password)
       const token = jwt.sign(
         { _id: user._id },
         NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret',
@@ -32,7 +32,8 @@ module.exports.login = (req, res, next) => {
       });
       res.status(200).send({ message: 'Авторизация успешна', token });
     })
-    .catch(() => {
+    .catch((err) => {
+      console.log(err, res,email,password)
       next(new Unauthorized('Не правильный логин или пароль'));
     });
 };
